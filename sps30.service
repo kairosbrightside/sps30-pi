@@ -1,0 +1,14 @@
+[Unit]
+Description=SPS30 Air Sensor Logger
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/sps30/particles.py <---- CHANGE TO YOUR FILEPATH	
+WorkingDirectory=/home/pi/sps30 <--- may need to change
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+User=pi <---- may need to change
+
+[Install]
+WantedBy=multi-user.target
