@@ -4,22 +4,21 @@ Sensor interface for real-time particulate monitoring using the SPS30 and Raspbe
 ### Preparing the Pi
 Type $\texttt{sudo raspi-config}$ into the terminal. Go to $\texttt{Interface Option}$ and enable UART. Then, reboot using $\texttt{sudo reboot}$. 
 
-This alone didn't work for me, so after rebooting, you may need to add this line to the config: $\texttt{enable\_uart=1}$. 
+This alone didn't work for me, so after rebooting, you may need to add this line to the config: 'enable\_uart=1}'.
 You can open the config using $\texttt{sudo nano /boot/config.txt}$. You might need to reboot again after doing this? 
 
 After rebooting and connecting the sensor, type $\texttt{ls -l /dev/serial*}$ into the terminal to find what serial port the sensor is connected to, and change the script to that port.
 
 ### Hardware connections:
 
-| SPS30 Pin | Wire Color | Raspberry Pi GPIO | Pin Number | Function            |
+| SPS30 Pin | Wire Color | Raspberry Pi GPIO | Pin Number | Function             |
 |-----------|------------|-------------------|-------------|---------------------|
 | 1 VCC     | Red        | 5V                | Pin 2 or 4  | Power               |
 | 2 RX      | Grey       | GPIO14 (TXD)      | Pin 8       | UART TX (from Pi)   |
 | 3 TX      | Green      | GPIO15 (RXD)      | Pin 10      | UART RX (to Pi)     |
 | 4 SEL     | Yellow     | —                 | —           | Leave unconnected   |
-| 5 GND     | Black      | GND               | Pin 6       | Ground  
+| 5 GND     | Black      | GND               | Pin 6       | Ground              |
 
-            |
 For more detailed connections, see the attached Fritzing schematic.
 
 
