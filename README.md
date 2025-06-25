@@ -4,7 +4,8 @@ Sensor interface for real-time particulate monitoring using the SPS30 and Raspbe
 ### Preparing the Pi
 Type $\texttt{sudo raspi-config}$ into the terminal. Go to $\texttt{Interface Option}$ and enable UART. Then, reboot using $\texttt{sudo reboot}$. 
 
-This alone didn't work for me, so after rebooting, you may need to add this line to the config: $\texttt{enable\textunderscore uart=1}$.
+This alone didn't work for me, so after rebooting, you may need to add this line to the config: 
+$\texttt{enable$\textunderscore$ uart=1}$.
 You can open the config using $\texttt{sudo nano /boot/config.txt}$. You might need to reboot again after doing this? 
 
 After rebooting and connecting the sensor, type $\texttt{ls -l /dev/serial*}$ into the terminal to find what serial port the sensor is connected to, and change the script to that port.
