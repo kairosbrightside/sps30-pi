@@ -30,12 +30,17 @@ $\texttt{pip install -e .}$
 
 ### Running the code on startup
 1) Move your script somewhere permanent
-Example directory: $\texttt{/home/pi/sps30/particles.py}$
 
-2) Make it executable
-$\texttt{chmod +x /home/pi/sps30/particles,py}$
+'''bash
+mkdir -p /home/pi/sps30
+cp particles.py /home/pi/sps30/
 
-3 Enable and start from the service file:
+2) Move the included service file (currently named $\texttt{sps30.service}$ to the $\texttt{systemd}$ directory (double-check the pi name and filepath)
+   
+$\texttt{sudo cp sps30.service /etc/systemd/system/}$
+
+4) Enable and start from the service file:
+
 $\texttt{sudo systemctl daemon-reexec}$
 $\texttt{sudo systemctl daemon-reload}$
 $\texttt{sudo systemctl enable sps30.service}$
