@@ -2,7 +2,7 @@
 Sensor interface for real-time particulate monitoring using the SPS30 and Raspberry Pi, with CSV logging support
 
 ### Preparing the Pi
-Type $\texttt{sudo raspi-config}$ into the terminal. Go to $\texttt{Interface Options}$ and select $\texttt{Serial port}$. Say no to "Would you like a login shell to be accessible over serial?" and yes to "Would you like the serial port hardware enabled?". Then, reboot using 
+Type  'sudo raspi-config' into the terminal. Go to $\texttt{Interface Options}$ and select $\texttt{Serial port}$. Say no to "Would you like a login shell to be accessible over serial?" and yes to "Would you like the serial port hardware enabled?". Then, reboot using 
 
 $\texttt{sudo reboot}$. 
 
