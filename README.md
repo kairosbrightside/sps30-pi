@@ -4,15 +4,21 @@ Sensor interface for real-time particulate monitoring using the SPS30 and Raspbe
 ### Preparing the Pi
 Type  `sudo raspi-config` into the terminal. Go to `Interface Options` and select `Serial port`. Say no to "Would you like a login shell to be accessible over serial?" and yes to "Would you like the serial port hardware enabled?". Then, reboot using 
 
-`sudo reboot`
+```bash
+sudo reboot
+```
 
 This alone didn't work for me, so after rebooting, you may need to add this line to the config: 
 
-`enable_uart=1`
+```bash
+enable_uart=1
+```
 
 You can open the config using 
 
-`sudo nano /boot/config.txt`
+```bash 
+sudo nano /boot/config.txt
+```
 
 You might need to reboot again after doing this? 
 
