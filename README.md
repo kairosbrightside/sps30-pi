@@ -38,7 +38,7 @@ For more detailed connections, see the attached Fritzing schematic.
 ### Dependencies:
 The dependencies can be found in the requirements.txt file. A user should be able to install them using:
 
-$\texttt{cd pi-particle-sensor}$ <--- change to your folder if it has a different name
+$\texttt{cd sps30-pi}$ <--- change to your folder if it has a different name
 
 $\texttt{pip install -e .}$
 
